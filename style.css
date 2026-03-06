@@ -191,7 +191,7 @@ p {
 		inset: 0;
 		z-index: -1;
 		background: linear-gradient(rgba(10, 20, 16, 0.24), rgba(10, 20, 16, 0.24)),
-			url("kamion.png") 62% top / 165% auto no-repeat;
+			url("kamion.png") 62% 32% / cover no-repeat;
 	}
 
 	.cv {
@@ -309,8 +309,8 @@ p {
 
 @media (max-width: 480px) {
 	body::before {
-		background-position: 68% top;
-		background-size: 190% auto;
+		background-position: 66% 34%;
+		background-size: cover;
 	}
 
 	.work-grid {

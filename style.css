@@ -63,6 +63,20 @@ h1 {
 	margin-bottom: 0;
 	color: var(--muted);
 	font-size: 1.02rem;
+	line-height: 1.45;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+}
+
+.inline-link,
+.contact-link {
+	color: inherit;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
+
+.contact-link {
+	font-weight: 700;
 }
 
 .button-row {
@@ -119,15 +133,13 @@ h2 {
 }
 
 .work-grid {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 0.9rem;
-	justify-content: center;
 }
 
 .work-item {
-	flex: 1 1 280px;
-	max-width: 320px;
+	min-height: 100%;
 	padding: 0.8rem 0.9rem;
 	border: 1px solid rgba(97, 97, 97, 0.22);
 	border-radius: 20px 90px;
@@ -172,7 +184,7 @@ p {
 @media (max-width: 700px) {
 	body {
 		background: linear-gradient(rgba(10, 20, 16, 0.24), rgba(10, 20, 16, 0.24)),
-			url("kamion.png") 58% center / cover no-repeat;
+			url("kamion.png") 62% top / 165% auto no-repeat;
 		background-attachment: scroll;
 	}
 
@@ -184,10 +196,21 @@ p {
 
 	h1 {
 		font-size: clamp(1.5rem, 7vw, 2rem);
+		letter-spacing: 0.35px;
+	}
+
+	.cv-header {
+		padding: 0.75rem 0.7rem;
 	}
 
 	.cv-header p {
 		font-size: 0.95rem;
+		padding: 0 0.2rem;
+	}
+
+	.contact-link {
+		display: inline-block;
+		padding: 0.1rem 0;
 	}
 
 	.button-row {
@@ -200,7 +223,12 @@ p {
 	}
 
 	.work-item {
-		max-width: 100%;
+		padding: 0.72rem 0.72rem;
+	}
+
+	.work-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.7rem;
 	}
 
 	table,
@@ -256,6 +284,18 @@ p {
 		font-size: 1.05rem;
 	}
 
+}
+
+@media (max-width: 480px) {
+	body {
+		background-position: 68% top;
+		background-size: 190% auto;
+	}
+
+	.work-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.62rem;
+	}
 }
 footer {
 	margin-top: 2rem;

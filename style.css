@@ -33,7 +33,7 @@ body {
 	margin: 2.2rem auto;
 	padding: 2rem;
 	border: 1px solid var(--line);
-	border-radius: 14px;
+	border-radius: 20px 90px;
 	box-shadow: 0 16px 38px rgba(0, 0, 0, 0.24);
 	background-color: rgba(255, 252, 247, 0.74);
 }
@@ -129,7 +129,7 @@ h2 {
 	max-width: 320px;
 	padding: 0.8rem 0.9rem;
 	border: 1px solid rgba(97, 97, 97, 0.22);
-	border-radius: 10px;
+	border-radius: 20px 90px;
 	background: rgba(255, 255, 255, 0.58);
 	backdrop-filter: blur(1px);
 	transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
@@ -177,7 +177,7 @@ p {
 	.cv {
 		margin: 1rem auto;
 		padding: 1.2rem;
-		border-radius: 10px;
+		border-radius: 20px 90px;
 	}
 
 	h1 {
@@ -293,14 +293,14 @@ th {
 tbody td {
 	background-color: rgba(255, 255, 255, 0.36);
 	border: 1px solid rgba(95, 16, 16, 0.22);
-	border-radius: 10px;
+	border-radius: 20px 90px;
 }
 
 tbody td h3,
 tbody td p,
 tbody td li {
 	padding: 0.2rem 0.35rem;
-	border-radius: 6px;
+	border-radius: 20px 90px;
 	transition: background-color 130ms ease, color 130ms ease;
 }
 

@@ -223,14 +223,20 @@ p {
 
 	.button-row {
 		gap: 0.45rem;
-		justify-content: center;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		padding-bottom: 0.2rem;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: thin;
 	}
 
 	.button {
-		flex: 0 1 auto;
+		flex: 0 0 auto;
 		min-height: 2.35rem;
 		padding: 0.5rem 0.75rem;
-		font-size: 0.82rem;
+		font-size: 0.8rem;
+		white-space: nowrap;
 	}
 
 	.work-item {

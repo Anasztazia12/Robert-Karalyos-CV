@@ -22,6 +22,7 @@ body {
 	background: linear-gradient(rgba(10, 20, 16, 0.28), rgba(10, 20, 16, 0.28)),
 		url("kamion.png") center center / cover fixed no-repeat;
 	color: var(--text);
+	position: relative;
 }
 
 .cv,
@@ -183,9 +184,16 @@ p {
 
 @media (max-width: 700px) {
 	body {
+		background: none;
+	}
+
+	body::before {
+		content: "";
+		position: fixed;
+		inset: 0;
+		z-index: -1;
 		background: linear-gradient(rgba(10, 20, 16, 0.24), rgba(10, 20, 16, 0.24)),
 			url("kamion.png") 62% top / 165% auto no-repeat;
-		background-attachment: scroll;
 	}
 
 	.cv {
@@ -215,11 +223,14 @@ p {
 
 	.button-row {
 		gap: 0.45rem;
+		justify-content: center;
 	}
 
 	.button {
-		flex: 1 1 100%;
+		flex: 0 1 auto;
 		min-height: 2.35rem;
+		padding: 0.5rem 0.75rem;
+		font-size: 0.82rem;
 	}
 
 	.work-item {
@@ -287,7 +298,7 @@ p {
 }
 
 @media (max-width: 480px) {
-	body {
+	body::before {
 		background-position: 68% top;
 		background-size: 190% auto;
 	}

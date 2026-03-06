@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Robert Karalyos - CV</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<main class="cv">
+		<header class="cv-header" id="contact">
+			<h1><strong>ROBERT KARALYOS</strong></h1>
+			<p><strong>Great Yarmouth, Norfolk | rkaralyos@gmail.com | +44 7304 066491</strong></p>
+		</header>
+		<div class="button-row">
+			<a class="button" href="#contact-info">Contact Me</a>
+			<a class="button" href="#work-experience">Work Experience</a>
+			<a class="button" href="#education">Education</a>
+			<button class="button" id="download-cv" type="button">Download CV</button>
+		</div>
+
+
+		<section>
+			<h2>Personal Statement</h2>
+			<p>
+				Both my successes and failures have helped shape who I am. They have motivated me to
+				improve continuously and seek new challenges. I am eager to grow personally and
+				professionally, and I am looking for opportunities that will allow me to expand my skills and
+				pursue my interests.
+			</p>
+		</section>
+
+		<section class="box" id="work-experience">
+			<h2 class="title">Work Experience</h2>
+			<div class="work-grid">
+				<article class="work-item">
+					<h3>Bus Driver</h3>
+					<p class="meta">Valmilyen Bus Company - Beccles</p>
+                    <p> February, 2025 - Present</p>
+					<ul>
+						<li>Transported passengers safely along designated routes</li>
+						<li>Maintained timeliness and vehicle cleanliness</li>
+					</ul>
+				</article>
+
+				<article class="work-item">
+					<h3>Sales Executive</h3>
+					<p class="meta">Big Motoring World - Norwich, Norfolk, Nov 2024 - Jan 2025</p>
+					<ul>
+						<li>Assisted customers with vehicle purchases and financing options</li>
+						<li>Delivered excellent customer service and exceeded sales targets</li>
+					</ul>
+				</article>
+
+				<article class="work-item">
+					<h3>Bus Driver</h3>
+					<p class="meta">First Bus - Great Yarmouth, Februaary 2024 - Oct 2024</p>
+					<ul>
+						<li>Transported passengers safely along designated routes</li>
+						<li>Maintained timeliness and vehicle cleanliness</li>
+					</ul>
+				</article>
+
+				<article class="work-item">
+					<h3>Insurance Broker</h3>
+					<p class="meta">Generali HU - Hungary, August 2021 - March 2023</p>
+					<ul>
+						<li>Sold life and liability insurance policies</li>
+						<li>Managed client portfolios and maintained relationships</li>
+						<li>Ensured accurate documentation and compliance</li>
+					</ul>
+				</article>
+
+				<article class="work-item">
+					<h3>Real Estate Agent</h3>
+					<p class="meta">Otthon Centrum - Hungary, Jan 2019 - Aug 2021</p>
+					<ul>
+						<li>Managed real estate listings and advertising</li>
+						<li>Acquired and maintained customer relationships</li>
+						<li>Presented properties and negotiated sales</li>
+					</ul>
+				</article>
+
+				<article class="work-item">
+					<h3>HGV Class 2 Driver</h3>
+					<p class="meta">Bidfood, Brakes - Nottingham, Nottinghamshire, Jan 2015 - Jun 2018</p>
+					<ul>
+						<li>Completed multi-drop deliveries to various locations</li>
+						<li>Ensured safe and timely transportation of goods</li>
+					</ul>
+				</article>
+
+			</div>
+		</section>
+
+		<section id="education">
+			<table>
+				<thead>
+					<tr>
+						<th>Education</th>
+						<th>Skills</th>
+						<th>Awards and Certifications</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<h3>A-Level in Hospitality Management</h3><br>
+							<p class="meta">Kaposvar, Hungary</p>
+							<p>Sept 1995 - May 2001</p>
+						</td>
+						<td>
+							<ul>
+								<li>Real Estate (3 years)</li><br>
+								<li>Information Security Awareness (10+ years)</li><br>
+								<li>Problem Solving and Management (10+ years)</li><br>
+								<li>Sales and Customer Relations (5 years)</li><br>
+								<li>React (Basic knowledge)</li><br>
+								<li>Strategic Thinking (10+ years)</li><br>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>Estate Agent, Estate Management, Property Management, Property Development - Oct 2024</li><br>
+								<li>EFSET English Certificate - B2 - September 2024</li><br>
+								<li>Mortgage Adviser / Mortgage Broker - October 2024</li><br>
+								<li>Property Law, VAT, and Taxation - October 2024</li><br>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<footer id="contact-info">
+			<h2>Contact Information</h2>
+			<h4>Email address: rkaralyos@gmail.com</h4>
+			<h4>Phone: +44 7304 066491</h4>
+		</footer>
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+	<script>
+		const downloadButton = document.getElementById("download-cv");
+		const cvElement = document.querySelector(".cv");
+
+		downloadButton.addEventListener("click", () => {
+			if (window.html2pdf) {
+				const options = {
+					margin: 8,
+					filename: "Robert-Karalyos-CV.pdf",
+					image: { type: "jpeg", quality: 0.98 },
+					html2canvas: { scale: 2, useCORS: true },
+					jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+				};
+				window.html2pdf().set(options).from(cvElement).save();
+				return;
+			}
+
+			window.print();
+		});
+	</script>
+</body>
+</html>

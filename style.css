@@ -1,0 +1,316 @@
+:root {
+	--bg: #f3efe7;
+	--paper: #fffdf9;
+	--text: #1f1f1f;
+	--muted: #4f4f4f;
+	--line: #ddd6ca;
+	--accent: #6f1717;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+/* fejlec */
+body {
+	margin: 0;
+	font-family: "Georgia", "Times New Roman", serif;
+	background: linear-gradient(rgba(10, 20, 16, 0.28), rgba(10, 20, 16, 0.28)),
+		url("image/kamion.png") center/cover fixed no-repeat;
+	color: var(--text);
+}
+
+.cv,
+.cv * {
+	font-synthesis: none;
+}
+
+.cv {
+	width: min(980px, 92vw);
+	margin: 2.2rem auto;
+	padding: 2rem;
+	border: 1px solid var(--line);
+	border-radius: 14px;
+	box-shadow: 0 16px 38px rgba(0, 0, 0, 0.24);
+	background-color: rgba(255, 252, 247, 0.74);
+}
+
+.cv-header {
+	border-bottom: 2px solid var(--line);
+	margin-bottom: 1.4rem;
+	padding-bottom: 1rem;
+	text-align: center;
+	border: 2px solid rgba(133, 3, 3, 0.973);
+	border-radius: 20px 90px;
+	padding: 0.8rem 1rem;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+
+h1 {
+	margin: 0;
+	font-size: clamp(2rem, 2.7vw, 2.9rem);
+	letter-spacing: 0.6px;
+	text-align: center;
+	color: #1f1f1f;
+}
+
+.cv-header p {
+	margin-bottom: 0;
+	color: var(--muted);
+	font-size: 1.02rem;
+}
+
+.button-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	justify-content: center;
+	margin-bottom: 1.2rem;
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.55rem 0.95rem;
+	border: 2px solid rgba(133, 3, 3, 0.973);
+	border-radius: 20px 90px;
+	background: rgba(255, 252, 247, 0.85);
+	color: #3a0f0f;
+	font-weight: 600;
+	font-size: 0.9rem;
+	letter-spacing: 0.35px;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-decoration: none;
+	font-family: inherit;
+	line-height: 1;
+	transition: transform 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+}
+
+.button:hover {
+	transform: translateY(-1px);
+	background: #ffffff;
+	box-shadow: 0 7px 16px rgba(0, 0, 0, 0.18);
+}
+
+h2 {
+	margin: 1.5rem 0 0.7rem;
+	color: var(--accent);
+	font-size: 1.22rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+/* cv flexbox */
+.box {
+	margin-top: 1rem;
+	margin-bottom: 1.6rem;
+}
+
+.title {
+	text-align: center;
+	margin-bottom: 1rem;
+	color: var(--accent);
+}
+
+.work-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.9rem;
+	justify-content: center;
+}
+
+.work-item {
+	flex: 1 1 280px;
+	max-width: 320px;
+	padding: 0.8rem 0.9rem;
+	border: 1px solid rgba(97, 97, 97, 0.22);
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.58);
+	backdrop-filter: blur(1px);
+	transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+#education {
+	margin-top: 1.8rem;
+	padding-top: 1rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.work-item:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+	border-color: rgba(31, 109, 90, 0.4);
+}
+
+.work-item h3 {
+	margin-top: 0;
+	padding-bottom: 0.35rem;
+	border-bottom: 1px solid rgba(97, 97, 97, 0.22);
+}
+
+.work-item ul {
+	margin-bottom: 0;
+}
+
+h3 {
+	margin: 1rem 0 0.2rem;
+	font-size: 1.05rem;
+}
+
+p {
+	margin: 0.4rem 0;
+	line-height: 1.6;
+}
+
+
+@media (max-width: 700px) {
+	body {
+		background: linear-gradient(rgba(10, 20, 16, 0.24), rgba(10, 20, 16, 0.24)),
+			url("image/kamion.png") center/cover no-repeat;
+	}
+
+	.cv {
+		margin: 1rem auto;
+		padding: 1.2rem;
+		border-radius: 10px;
+	}
+
+	h1 {
+		font-size: clamp(1.5rem, 7vw, 2rem);
+	}
+
+	.cv-header p {
+		font-size: 0.95rem;
+	}
+
+	.button-row {
+		gap: 0.45rem;
+	}
+
+	.button {
+		flex: 1 1 100%;
+		min-height: 2.35rem;
+	}
+
+	.work-item {
+		max-width: 100%;
+	}
+
+	table,
+	thead,
+	tbody,
+	tr,
+	td {
+		display: block;
+		width: 100%;
+	}
+
+	thead {
+		display: none;
+	}
+
+	table {
+		border-spacing: 0;
+		padding: 0.7rem;
+	}
+
+	tbody tr {
+		display: grid;
+		gap: 0.65rem;
+	}
+
+	tbody td {
+		padding: 0.7rem;
+	}
+
+	tbody td::before {
+		display: block;
+		font-size: 0.8rem;
+		font-weight: 700;
+		letter-spacing: 0.4px;
+		text-transform: uppercase;
+		color: #5f1010;
+		margin-bottom: 0.35rem;
+	}
+
+	tbody td:nth-child(1)::before {
+		content: "Education";
+	}
+
+	tbody td:nth-child(2)::before {
+		content: "Skills";
+	}
+
+	tbody td:nth-child(3)::before {
+		content: "Awards and Certifications";
+	}
+
+	h2 {
+		font-size: 1.05rem;
+	}
+
+}
+footer {
+	margin-top: 2rem;
+	padding-top: 1rem;
+	border-top: #072e25 2px solid;
+	text-align: center;
+	font-size: 1rem;
+	color: #020202;
+}
+
+table {
+	width: 100%;
+	color: rgb(8, 8, 8);
+	padding: 0.5rem;
+	border: 2px solid rgba(133, 3, 3, 0.973);
+	border-radius: 20px 90px;
+	padding-bottom: 0.8rem;
+	background-color: rgba(255, 252, 247, 0.58);
+	backdrop-filter: blur(1px);
+	border-collapse: separate;
+	border-spacing: 10px 0;
+}
+
+th,
+td {
+	padding: 0.65rem 0.7rem;
+	vertical-align: top;
+	transition: background-color 140ms ease;
+}
+
+th {
+	color: #5f1010;
+	font-size: 1rem;
+	border-bottom: 1px solid rgba(133, 3, 3, 0.25);
+}
+
+tbody td {
+	background-color: rgba(255, 255, 255, 0.36);
+	border: 1px solid rgba(95, 16, 16, 0.22);
+	border-radius: 10px;
+}
+
+tbody td h3,
+tbody td p,
+tbody td li {
+	padding: 0.2rem 0.35rem;
+	border-radius: 6px;
+	transition: background-color 130ms ease, color 130ms ease;
+}
+
+tbody td p:hover,
+tbody td li:hover,
+tbody td h3:hover {
+	background-color: rgba(20, 53, 66, 0.16);
+	color: #172a33;
+}
+.table {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(97, 97, 97, 0.22);
+}

@@ -10,7 +10,7 @@
 	<main class="cv">
 		<header class="cv-header" id="contact">
 			<h1><strong>ROBERT KARALYOS</strong></h1>
-			<p><strong>Great Yarmouth, Norfolk | <a class="inline-link" href="mailto:rkaralyos@gmail.com">rkaralyos@gmail.com</a> | <a class="inline-link" href="tel:+447304066491">+44 7304 066491</a></strong></p>
+			<p><strong>Great Yarmouth, Norfolk | <a class="inline-link" href="mailto:rkaralyos@gmail.com">rkaralyos@gmail.com</a> | <a class="inline-link" href="tel:+44 7549631979">+44 7549631979</a></strong></p>
 		</header>
 		<div class="button-row">
 			<a class="button" href="#contact-info">Contact Me</a>
@@ -35,7 +35,7 @@
 			<div class="work-grid">
 				<article class="work-item">
 					<h3>Bus Driver</h3>
-					<p class="meta">Valamilyen Bus Company - Beccles</p>
+					<p class="meta">Border Bus - Beccles</p>
                     <p> February, 2025 - Present</p>
 					<ul>
 						<li>Transported passengers safely along designated routes</li>
@@ -135,11 +135,22 @@
 		<footer id="contact-info">
 			<h2>Contact Information</h2>
 			<h4>Email address: <a class="contact-link" href="mailto:rkaralyos@gmail.com">rkaralyos@gmail.com</a></h4>
-			<h4>Phone: <a class="contact-link" href="tel:+447304066491">+44 7304 066491</a></h4>
+			<h4>Phone: <a class="contact-link" href="tel:+44 7549631979">+44 7549631979</a></h4>
 		</footer>
 	</main>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 	<script>
+		if ("scrollRestoration" in history) {
+			history.scrollRestoration = "manual";
+		}
+
+		window.addEventListener("DOMContentLoaded", () => {
+			if (window.location.hash === "#contact-info") {
+				history.replaceState(null, "", window.location.pathname + window.location.search);
+			}
+			window.scrollTo(0, 0);
+		});
+
 		const downloadButton = document.getElementById("download-cv");
 		const cvElement = document.querySelector(".cv");
 

@@ -223,20 +223,26 @@ p {
 
 	.button-row {
 		gap: 0.45rem;
-		justify-content: flex-start;
-		flex-wrap: nowrap;
-		overflow-x: auto;
-		padding-bottom: 0.2rem;
-		-webkit-overflow-scrolling: touch;
-		scrollbar-width: thin;
+		justify-content: center;
+		flex-wrap: wrap;
+		overflow-x: visible;
+		padding-bottom: 0.1rem;
 	}
 
 	.button {
-		flex: 0 0 auto;
+		flex: 1 1 calc(50% - 0.45rem);
+		max-width: calc(50% - 0.45rem);
 		min-height: 2.35rem;
 		padding: 0.5rem 0.75rem;
 		font-size: 0.8rem;
-		white-space: nowrap;
+		white-space: normal;
+		text-align: center;
+		box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14), inset 0 -2px 0 rgba(111, 23, 23, 0.2);
+	}
+
+	.button:active {
+		transform: translateY(1px);
+		box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16), inset 0 -1px 0 rgba(111, 23, 23, 0.18);
 	}
 
 	.work-item {

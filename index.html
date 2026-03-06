@@ -154,16 +154,29 @@
 		const downloadButton = document.getElementById("download-cv");
 		const cvElement = document.querySelector(".cv");
 
-		downloadButton.addEventListener("click", () => {
+		downloadButton.addEventListener("click", async () => {
 			if (window.html2pdf) {
-				const options = {
-					margin: 8,
-					filename: "Robert-Karalyos-CV.pdf",
-					image: { type: "jpeg", quality: 0.98 },
-					html2canvas: { scale: 2, useCORS: true },
-					jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
-				};
-				window.html2pdf().set(options).from(cvElement).save();
+				document.body.classList.add("pdf-export");
+				try {
+					await new Promise((resolve) => requestAnimationFrame(resolve));
+
+					const options = {
+						margin: 10,
+						filename: "Robert-Karalyos-CV.pdf",
+						image: { type: "jpeg", quality: 0.98 },
+						html2canvas: {
+							scale: 2,
+							useCORS: true,
+							scrollX: 0,
+							scrollY: 0,
+							windowWidth: cvElement.scrollWidth
+						},
+						jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+					};
+					await window.html2pdf().set(options).from(cvElement).save();
+				} finally {
+					document.body.classList.remove("pdf-export");
+				}
 				return;
 			}
 

@@ -13,20 +13,22 @@
 			<p><strong>Great Yarmouth, Norfolk | <a class="inline-link" href="mailto:rkaralyos@gmail.com">rkaralyos@gmail.com</a> | <a class="inline-link" href="tel:+44 7549631979">+44 7549631979</a></strong></p>
 		</header>
 		<div class="button-row">
+			<a class="button5" href="#about-me">About Me</a>
 			<a class="button1" href="#contact-info">Contact Me</a>
 			<a class="button2" href="#work-experience">Work Experience</a>
 			<a class="button3" href="#education">Education</a>
 			<button class="button4" id="download-cv" type="button">Download CV</button>
 		</div>
 
-
-		<section>
-			<h2>Personal Statement</h2>
-			<p>
-				Both my successes and failures have helped shape who I am. They have motivated me to
-				improve continuously and seek new challenges. I am eager to grow personally and
-				professionally, and I am looking for opportunities that will allow me to expand my skills and
-				pursue my interests.
+		<section id="about-me" class="box">
+			<h2>About Me</h2>
+			<p class="about-text">
+				I am Robert Karalyos, a hardworking and reliable professional based in Great Yarmouth. My
+				experience in transport, sales, insurance, and real estate has helped me build strong customer
+				communication, problem-solving, and responsibility skills. As a father of two children, I know
+				how important consistency, patience, and commitment are, both in life and at work. I am looking
+				for a role where I can add value from day one, continue learning, and grow long-term with a
+				strong team.
 			</p>
 		</section>
 
@@ -93,43 +95,38 @@
 			</div>
 		</section>
 
-		<section id="education">
-			<table>
-				<thead>
-					<tr>
-						<th>Education</th>
-						<th>Skills</th>
-						<th>Awards and Certifications</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<h3>A-Level in Hospitality Management</h3><br>
-							<p class="meta">Kaposvar, Hungary</p>
-							<p>Sept 1995 - May 2001</p>
-						</td>
-						<td>
-							<ul>
-								<li>Real Estate (3 years)</li><br>
-								<li>Information Security Awareness (10+ years)</li><br>
-								<li>Problem Solving and Management (10+ years)</li><br>
-								<li>Sales and Customer Relations (5 years)</li><br>
-								<li>React (Basic knowledge)</li><br>
-								<li>Strategic Thinking (10+ years)</li><br>
-							</ul>
-						</td>
-						<td>
-							<ul>
-								<li>Estate Agent, Estate Management, Property Management, Property Development - Oct 2024</li><br>
-								<li>EFSET English Certificate - B2 - September 2024</li><br>
-								<li>Mortgage Adviser / Mortgage Broker - October 2024</li><br>
-								<li>Property Law, VAT, and Taxation - October 2024</li><br>
-							</ul>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+		<section id="education" class="qualifications">
+			<h2 class="title">Education, Skills and Certifications</h2>
+			<div class="qual-grid">
+				<article class="qual-card">
+					<h3>Education</h3>
+					<p class="meta">Kaposvar, Hungary</p>
+					<p>A-Level in Hospitality Management</p>
+					<p>Sept 1995 - May 2001</p>
+				</article>
+
+				<article class="qual-card">
+					<h3>Skills</h3>
+					<ul class="skill-list">
+						<li>Real Estate (3 years)</li>
+						<li>Information Security Awareness (10+ years)</li>
+						<li>Problem Solving and Management (10+ years)</li>
+						<li>Sales and Customer Relations (5 years)</li>
+						<li>React (basic knowledge)</li>
+						<li>Strategic Thinking (10+ years)</li>
+					</ul>
+				</article>
+
+				<article class="qual-card">
+					<h3>Awards and Certifications</h3>
+					<ul class="cert-list">
+						<li>Estate Agent, Estate Management, Property Management, Property Development <span>Oct 2024</span></li>
+						<li>EFSET English Certificate - B2 <span>Sept 2024</span></li>
+						<li>Mortgage Adviser / Mortgage Broker <span>Oct 2024</span></li>
+						<li>Property Law, VAT, and Taxation <span>Oct 2024</span></li>
+					</ul>
+				</article>
+			</div>
 		</section>
 
 		<footer id="contact-info">
@@ -168,8 +165,7 @@
 							scale: 2,
 							useCORS: true,
 							scrollX: 0,
-							scrollY: 0,
-							windowWidth: cvElement.scrollWidth
+							scrollY: 0
 						},
 						jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
 					};

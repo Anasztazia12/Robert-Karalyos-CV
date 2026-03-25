@@ -24,8 +24,6 @@ body {
 	color: var(--text);
 	position: relative;
 }
-
-.cv,
 .cv * {
 	font-synthesis: none;
 }
@@ -48,8 +46,6 @@ body {
 	padding: 0.8rem 1rem;
 	background: rgba(255, 255, 255, 0.5);
 }
-
-
 h1 {
 	margin: 0;
 	font-size: clamp(2rem, 2.7vw, 2.9rem);
@@ -86,58 +82,16 @@ h1 {
 	margin-bottom: 1.2rem;
 }
 
-.button1, .button2, .button3, .button4, .button5 { 
+.btn.btn-danger { 
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	padding: 0.55rem 0.95rem;
 	border: 4px solid rgba(133, 3, 3, 0.973); 
 	border-radius: 20px 90px;
-	color: #3a0f0f;
-	font-weight: 600;
-	font-size: 0.9rem;
-	letter-spacing: 0.35px;
-	text-transform: uppercase;
-	cursor: pointer;
-	text-decoration: none;
-	font-family: inherit;
 	line-height: 1;
 	transition: transform 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
 } 
-
-.button1 {
-	background: rgba(134, 38, 0, 0.644);
-	
-}
-
-.button2 {
-	background: rgba(142, 194, 0, 0.548);
-	
-}
-
-.button3 {
-	background: rgba(41, 1, 187, 0.562);
-	
-}
-
-.button4 {
-	background: rgba(0, 129, 22, 0.664);
-
-}
-
-.button5 {
-	background: rgba(184, 121, 3, 0.63);
-}
-
-.button1:hover,
-.button2:hover,
-.button3:hover,
-.button4:hover,
-.button5:hover {
-	transform: translateY(-1px);
-	background: #ffffff;
-	box-shadow: 0 7px 16px rgba(0, 0, 0, 0.18);
-}
 
 h2 {
 	margin: 1.5rem 0 0.7rem;
@@ -164,7 +118,6 @@ h2 {
 	margin-bottom: 1rem;
 	color: var(--accent); 
 }
-
 
 .work-grid {
 	display: grid;
@@ -275,7 +228,6 @@ p {
 	line-height: 1.6;
 }
 
-
 @media (max-width: 700px) {
 	body {
 		background: none;
@@ -322,31 +274,10 @@ p {
 		overflow-x: visible;
 		padding-bottom: 0.1rem;
 	}
-
-	.button1,
-	.button2,
-	.button3,
-	.button4,
-	.button5 {
-		flex: 1 1 calc(50% - 0.45rem);
-		max-width: calc(50% - 0.45rem);
-		min-height: 2.35rem;
-		padding: 0.5rem 0.75rem;
-		font-size: 0.8rem;
-		white-space: normal;
-		text-align: center;
-		box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14), inset 0 -2px 0 rgba(111, 23, 23, 0.2);
-	}
-
-	.button1:active,
-	.button2:active,
-	.button3:active,
-	.button4:active,
-	.button5:active {
-		transform: translateY(1px);
-		box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16), inset 0 -1px 0 rgba(111, 23, 23, 0.18);
-	}
-
+	.btn.btn-danger {
+		padding: 0.45rem 0.75rem;
+		font-size: 0.85rem;
+	}	
 	.work-item {
 		padding: 0.72rem 0.72rem;
 	}

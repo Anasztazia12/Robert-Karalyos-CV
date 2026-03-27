@@ -245,7 +245,7 @@ p {
 	margin: 0.4rem 0;
 	line-height: 1.6;
 }
-
+/* reszponzivitas */
 @media (max-width: 700px) {
 	body {
 		background: none;

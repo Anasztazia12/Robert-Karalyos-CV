@@ -1,44 +1,76 @@
 # Robert Karalyos CV Website
 
-This project is a modern, responsive online CV (Curriculum Vitae) for Robert Karalyos. The site is built with HTML and CSS, designed for clarity, accessibility, and professional presentation. Below is a detailed plan and description of the project, following a 5-step structure, and including a note about W3C validation.
+This project is a modern, responsive online CV (Curriculum Vitae) for Robert Karalyos, built with HTML and CSS.
 
-## 1. Project Overview
+The CV was created to provide a clear, accessible, and visually appealing presentation of Robert Karalyos’s professional background. It serves as a digital portfolio to showcase his experience, education, skills, and certifications to potential employers and collaborators. The goal is to make a strong first impression and make it easy for viewers to quickly understand Robert’s qualifications and contact him if interested.
 
-The website presents Robert Karalyos's professional profile, including work experience, education, skills, and certifications. The design emphasizes readability, clean layout, and a visually appealing style, making it suitable for both desktop and mobile devices.
 
-## 2. Features
+## 1. Strategy Plan
 
-- **Responsive Design:** The layout adapts to various screen sizes, ensuring usability on desktops, tablets, and smartphones.
-- **Modern Aesthetics:** Uses a soft color palette, custom fonts, and subtle effects for a professional look.
-- **Sectioned Content:** Clearly separated sections for personal information, work experience, education, skills, and certifications.
-- **Interactive Elements:** Hover effects and interactive links for better user engagement.
-- **Print & PDF Export:** Optimized for printing and PDF export, with special styles for clean output.
+**Goal:** Present Robert Karalyos’s professional profile in a clear, accessible, and visually appealing way, suitable for both digital and print formats. The CV should highlight experience, education, skills, and certifications, making a strong impression on potential employers or collaborators.
 
-## 3. File Structure
+**Target Audience:** Recruiters, employers, and professional contacts seeking a concise and attractive overview of Robert’s qualifications.
 
-- `index.html` — The main HTML file containing the structure and content of the CV.
-- `style.css` — The CSS file providing all styles, including layout, colors, typography, and responsive rules.
-- (Optional) `kamion.png` — Background image referenced in the CSS for visual enhancement.
+## 2. Scope
 
-## 4. Usage Instructions
+**Content:**
 
-1. **Clone or Download:**
-   - Download the repository or clone it to your local machine.
-2. **Open the Site:**
-   - Open `index.html` in any modern web browser.
-3. **Customize (Optional):**
-   - Edit `index.html` to update personal details, work experience, or other sections as needed.
-   - Adjust `style.css` for further design customization.
-4. **Print or Export as PDF:**
-   - Use the browser's print function to print or save the CV as a PDF. The layout is optimized for both.
+- Personal introduction and contact information
+- Work experience
+- Education
+- Skills
+- Certifications
 
-## 5. Validation and Testing
+**Functional Requirements:**
 
-- **W3C Validation:**
-  - The HTML and CSS files have been tested and validated using the [W3C Markup Validation Service](https://validator.w3.org/) and [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/). This ensures the code follows web standards and is compatible with all major browsers.
-- **Cross-Browser Compatibility:**
-  - The site has been checked in multiple browsers to ensure consistent appearance and functionality.
-- **Mobile Responsiveness:**
-  - The design has been tested on various devices and screen sizes for optimal viewing.
+- Responsive layout for desktop and mobile
+- Print and PDF export support
+- Interactive links and hover effects
+- Accessibility and cross-browser compatibility
+
+## 3. Structure
+
+**Information Architecture:**
+
+- The CV is divided into clear sections: Header, About, Work Experience, Education, Skills, and Certifications.
+- Navigation is linear, guiding the reader from personal info through professional details.
+
+**File Structure:**
+
+- `index.html` — Main HTML file with all content and structure
+- `style.css` — CSS file for layout, colors, typography, and responsiveness
+- (Optional) `kamion.png` — Background image for visual enhancement
+
+## 4. Skeleton
+
+**Layout:**
+
+- Centralized CV card with a bordered, shadowed container
+- Section headers for easy scanning
+- Grid layouts for work experience and education
+- Lists for skills and certifications
+- Modal for additional information or actions
+
+**Interaction:**
+
+- Hover effects on interactive elements
+- Dowloadable PDF CV
+
+## 5. Surface
+
+**Visual Design:**
+
+- Soft, professional color palette
+- Rounded borders and subtle shadows for depth
+- Modern, legible fonts
+- Clean spacing and alignment
+- Background image for personality (optional)
+
+**Polish:**
+
+- HTML and CSS code is validated using the [W3C Markup Validation Service]
+(https://validator.w3.org/) and [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
 ---
+
+For any questions or suggestions, feel free to contact the project maintainer.

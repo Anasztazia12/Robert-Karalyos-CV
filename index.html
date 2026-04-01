@@ -112,12 +112,12 @@
 				<article class="qual-card">
 					<h3>Skills</h3>
 					<ul class="skill-list">
-						<li>Real Estate (3 years)</li>
-						<li>Information Security Awareness (10+ years)</li>
-						<li>Problem Solving and Management (10+ years)</li>
-						<li>Sales and Customer Relations (5 years)</li>
-						<li>React (basic knowledge)</li>
-						<li>Strategic Thinking (10+ years)</li>
+						<li>Safe passenger and goods transportation</li>
+						<li>Route planning, punctuality, and time management</li>
+						<li>Excellent customer service and communication</li>
+						<li>Sales support and client relationship management</li>
+						<li>Problem-solving under pressure</li>
+						<li>Accurate documentation and compliance awareness</li>
 					</ul>
 				</article>
 
@@ -131,6 +131,12 @@
 					</ul>
 				</article>
 			</div>
+		</section>
+
+		<section id="contact-info" class="contact-print box" aria-label="Contact Information">
+			<h2>Contact Information</h2>
+			<h4>Email address: <a class="contact-link" href="mailto:rkaralyos@gmail.com">rkaralyos@gmail.com</a></h4>
+			<h4>Phone: <a class="contact-link" href="tel:+44 7549631979">+44 7549631979</a></h4>
 		</section>
 
 		</main>
@@ -154,12 +160,6 @@
 			</div>
 		</div>
 
-		<footer id="contact-info" style="display:none">
-				<h2>Contact Information</h2>
-				<h4>Email address: <a class="contact-link" href="mailto:rkaralyos@gmail.com">rkaralyos@gmail.com</a></h4>
-				<h4>Phone: <a class="contact-link" href="tel:+44 7549631979">+44 7549631979</a></h4>
-		</footer>
-	</main>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 	<script>
 		if ("scrollRestoration" in history) {
@@ -186,6 +186,10 @@
 						margin: 10,
 						filename: "Robert-Karalyos-CV.pdf",
 						image: { type: "jpeg", quality: 0.98 },
+						pagebreak: {
+							mode: ["css", "legacy"],
+							avoid: [".cv-header", ".qual-card", ".contact-print"]
+						},
 						html2canvas: {
 							scale: 2,
 							useCORS: true,

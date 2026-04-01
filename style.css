@@ -130,6 +130,13 @@ h2 {
 	margin-bottom: 1.6rem;
 }
 
+.contact-print {
+	display: none;
+	margin-top: 1.6rem;
+	padding-top: 0.9rem;
+	border-top: 2px solid rgba(7, 46, 37, 0.45);
+}
+
 .title {
 	text-align: center;
 	margin-bottom: 1rem;
@@ -335,20 +342,92 @@ body.pdf-export {
 	padding: 0;
 }
 
+body.pdf-export::before {
+	content: none;
+	background: none;
+}
+
 body.pdf-export .cv {
 	width: 190mm;
 	max-width: 190mm;
 	margin: 0;
 	box-shadow: none;
+	padding: 8mm;
+	border-radius: 0;
+	background: #fff;
 }
 
 body.pdf-export .button-row {
 	display: none;
 }
 
+body.pdf-export .work-grid,
+body.pdf-export .qual-grid {
+	grid-template-columns: 1fr;
+	gap: 2mm;
+}
+
+body.pdf-export .cv-header,
+body.pdf-export .work-item,
+body.pdf-export .qual-card {
+	background: #fff;
+	backdrop-filter: none;
+}
+
+body.pdf-export .work-item,
+body.pdf-export .qual-card {
+	border: none;
+	border-radius: 0;
+	padding: 0.35rem 0;
+	box-shadow: none;
+}
+
+body.pdf-export .work-item h3,
+body.pdf-export .qual-card h3 {
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0.15rem;
+}
+
+body.pdf-export #education {
+	border-top: none;
+	margin-top: 1.2rem;
+	padding-top: 0.35rem;
+}
+
+body.pdf-export .box {
+	margin-bottom: 0.8rem;
+}
+
+body.pdf-export .cv-header,
+body.pdf-export .qual-card,
+body.pdf-export .contact-print {
+	break-inside: avoid;
+	page-break-inside: avoid;
+}
+
+body.pdf-export .work-item {
+	break-inside: auto;
+	page-break-inside: auto;
+}
+
+body.pdf-export #education,
+body.pdf-export #contact-info {
+	break-before: auto;
+	page-break-before: auto;
+}
+
+body.pdf-export .contact-print {
+	display: block;
+}
+
 @media print {
 	.button-row {
 		display: none;
+	}
+
+	.contact-print {
+		display: block;
 	}
 }
 

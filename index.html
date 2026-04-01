@@ -4,6 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Robert Karalyos - CV</title>
+	<link rel="icon" href="data:," />
 	<link rel="stylesheet" href="style.css"/>
 
 	<!--bootstrap-->
@@ -175,8 +176,32 @@
 
 		const downloadButton = document.getElementById("download-cv");
 		const cvElement = document.querySelector(".cv");
+		const fallbackPdfPath = "Robert-Karalyos-CV.pdf";
+
+		function shouldUseStaticPdf() {
+			const ua = navigator.userAgent || "";
+			const mobileUa = /Android|iPhone|iPad|iPod|Mobile/i.test(ua);
+			const narrowViewport = window.matchMedia("(max-width: 900px)").matches;
+			return mobileUa || narrowViewport;
+		}
+
+		function openStaticPdf() {
+			const link = document.createElement("a");
+			link.href = fallbackPdfPath;
+			link.download = "Robert-Karalyos-CV.pdf";
+			link.target = "_blank";
+			link.rel = "noopener";
+			document.body.appendChild(link);
+			link.click();
+			link.remove();
+		}
 
 		downloadButton.addEventListener("click", async () => {
+			if (shouldUseStaticPdf()) {
+				openStaticPdf();
+				return;
+			}
+
 			if (window.html2pdf) {
 				document.body.classList.add("pdf-export");
 				try {

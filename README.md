@@ -4,6 +4,10 @@ This project is a modern, responsive online CV (Curriculum Vitae) for Robert Kar
 
 The CV was created to provide a clear, accessible, and visually appealing presentation of Robert Karalyos’s professional background. It serves as a digital portfolio to showcase his experience, education, skills, and certifications to potential employers and collaborators. The goal is to make a strong first impression and make it easy for viewers to quickly understand Robert’s qualifications and contact him if interested.
 
+## Mobile View Screenshot (DevTools)
+
+![Mobile view in DevTools (iPhone XR)](assets/pictures/screenshot.png)
+
 ## 1. Strategy Plan
 
 **Goal:** Present Robert Karalyos’s professional profile in a clear, accessible, and visually appealing way, suitable for both digital and print formats. The CV should highlight experience, education, skills, and certifications, making a strong impression on potential employers or collaborators.
@@ -38,7 +42,7 @@ The CV was created to provide a clear, accessible, and visually appealing presen
 
 - `index.html` — Main HTML file with all content and structure
 - `style.css` — CSS file for layout, colors, typography, and responsiveness
-- (Optional) `kamion.png` — Background image for visual enhancement
+- (Optional) `assets/pictures/kamion.png` — Background image for visual enhancement
 
 ## 4. Skeleton
 

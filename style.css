@@ -365,7 +365,7 @@ p {
 }
 
 body.pdf-export {
-	background: #f3efe7;
+	background: #fff !important;
 	display: flex;
 	justify-content: center;
 	padding: 0;
@@ -374,6 +374,13 @@ body.pdf-export {
 body.pdf-export::before {
 	content: none;
 	background: none;
+	display: none !important;
+}
+
+body.pdf-export,
+body.pdf-export .cv,
+body.pdf-export .cv * {
+	background-image: none !important;
 }
 
 body.pdf-export .cv {
@@ -381,9 +388,10 @@ body.pdf-export .cv {
 	max-width: 190mm;
 	margin: 0;
 	box-shadow: none;
-	padding: 8mm;
+	padding: 6mm 7mm;
 	border-radius: 0;
-	background: #fff;
+	border: none;
+	background: #fff !important;
 }
 
 body.pdf-export .button-row {
@@ -392,8 +400,8 @@ body.pdf-export .button-row {
 
 body.pdf-export .work-grid,
 body.pdf-export .qual-grid {
-	grid-template-columns: 1fr;
-	gap: 2mm;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.6mm 2.8mm;
 }
 
 body.pdf-export .cv-header,
@@ -403,12 +411,27 @@ body.pdf-export .qual-card {
 	backdrop-filter: none;
 }
 
+body.pdf-export .cv-header {
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	margin: 0 0 0.35rem;
+}
+
+body.pdf-export h1 {
+	font-size: 1.6rem;
+	line-height: 1.1;
+	margin: 0;
+}
+
 body.pdf-export .work-item,
 body.pdf-export .qual-card {
 	border: none;
 	border-radius: 0;
-	padding: 0.35rem 0;
+	padding: 0.18rem 0;
 	box-shadow: none;
+	break-inside: avoid;
+	page-break-inside: avoid;
 }
 
 body.pdf-export .work-item h3,
@@ -420,12 +443,22 @@ body.pdf-export .qual-card h3 {
 
 body.pdf-export #education {
 	border-top: none;
-	margin-top: 1.2rem;
+	margin-top: 0.8rem;
 	padding-top: 0.35rem;
+	break-before: page;
+	page-break-before: always;
 }
 
 body.pdf-export .box {
-	margin-bottom: 0.8rem;
+	margin-bottom: 0.3rem;
+}
+
+body.pdf-export #about-me {
+	margin-bottom: 0.2rem;
+}
+
+body.pdf-export #about-me .about-text {
+	margin-bottom: 0;
 }
 
 body.pdf-export .cv-header,
@@ -435,12 +468,6 @@ body.pdf-export .contact-print {
 	page-break-inside: avoid;
 }
 
-body.pdf-export .work-item {
-	break-inside: auto;
-	page-break-inside: auto;
-}
-
-body.pdf-export #education,
 body.pdf-export #contact-info {
 	break-before: auto;
 	page-break-before: auto;
@@ -448,6 +475,28 @@ body.pdf-export #contact-info {
 
 body.pdf-export .contact-print {
 	display: block;
+	border-top: none;
+	padding-top: 0;
+	margin-top: 0.6rem;
+}
+
+body.pdf-export p,
+body.pdf-export li {
+	line-height: 1.35;
+	margin: 0.22rem 0;
+}
+
+body.pdf-export h2 {
+	margin: 0.6rem 0 0.35rem;
+}
+
+body.pdf-export li,
+body.pdf-export p,
+body.pdf-export h3,
+body.pdf-export h4 {
+	overflow-wrap: break-word;
+	word-break: normal;
+	hyphens: none;
 }
 
 @media print {
@@ -458,12 +507,4 @@ body.pdf-export .contact-print {
 	.contact-print {
 		display: block;
 	}
-}
-
-body.pdf-export li,
-body.pdf-export p,
-body.pdf-export h3,
-body.pdf-export h4 {
-	overflow-wrap: anywhere;
-	word-break: break-word;
 }

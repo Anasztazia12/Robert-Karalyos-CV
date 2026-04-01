@@ -22,7 +22,7 @@
 			<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Me</button>
 			<a class="btn btn-danger" href="#work-experience">Work Experience</a>
 			<a class="btn btn-danger" href="#education">Education</a>
-			<button class="btn btn-danger" id="download-cv" type="button">Download CV</button>
+			<a class="btn btn-danger" id="download-cv" href="Robert-Karalyos-CV.pdf" download="Robert-Karalyos-CV.pdf" target="_blank" rel="noopener">Download CV</a>
 		</div>
 
 		<section id="about-me" class="box">
@@ -33,7 +33,7 @@
 				communication, problem-solving, and responsibility skills. As a father of two children, I know
 				how important consistency, patience, and commitment are, both in life and at work. I am looking
 				for a role where I can add value from day one, continue learning, and grow long-term with a
-				strong team. <hr>
+				strong team.
 			</p>
 		</section>
 
@@ -161,7 +161,6 @@
 			</div>
 		</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 	<script>
 		if ("scrollRestoration" in history) {
 			history.scrollRestoration = "manual";
@@ -172,65 +171,6 @@
 				history.replaceState(null, "", window.location.pathname + window.location.search);
 			}
 			window.scrollTo(0, 0);
-		});
-
-		const downloadButton = document.getElementById("download-cv");
-		const cvElement = document.querySelector(".cv");
-		const fallbackPdfPath = "Robert-Karalyos-CV.pdf";
-
-		function shouldUseStaticPdf() {
-			const ua = navigator.userAgent || "";
-			const mobileUa = /Android|iPhone|iPad|iPod|Mobile/i.test(ua);
-			const narrowViewport = window.matchMedia("(max-width: 900px)").matches;
-			return mobileUa || narrowViewport;
-		}
-
-		function openStaticPdf() {
-			const link = document.createElement("a");
-			link.href = fallbackPdfPath;
-			link.download = "Robert-Karalyos-CV.pdf";
-			link.target = "_blank";
-			link.rel = "noopener";
-			document.body.appendChild(link);
-			link.click();
-			link.remove();
-		}
-
-		downloadButton.addEventListener("click", async () => {
-			if (shouldUseStaticPdf()) {
-				openStaticPdf();
-				return;
-			}
-
-			if (window.html2pdf) {
-				document.body.classList.add("pdf-export");
-				try {
-					await new Promise((resolve) => requestAnimationFrame(resolve));
-
-					const options = {
-						margin: 10,
-						filename: "Robert-Karalyos-CV.pdf",
-						image: { type: "jpeg", quality: 0.98 },
-						pagebreak: {
-							mode: ["css", "legacy"],
-							avoid: [".cv-header", ".qual-card", ".contact-print"]
-						},
-						html2canvas: {
-							scale: 2,
-							useCORS: true,
-							scrollX: 0,
-							scrollY: 0
-						},
-						jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
-					};
-					await window.html2pdf().set(options).from(cvElement).save();
-				} finally {
-					document.body.classList.remove("pdf-export");
-				}
-				return;
-			}
-
-			window.print();
 		});
 	</script>
 	<!-- Bootstrap JS (for modal) -->

@@ -502,6 +502,21 @@ body.pdf-export h4 {
 }
 
 @media print {
+	body {
+		background: #fff !important;
+	}
+
+	body::before {
+		content: none !important;
+		background: none !important;
+		display: none !important;
+	}
+
+	.cv,
+	.cv * {
+		background-image: none !important;
+	}
+
 	.button-row {
 		display: none;
 	}

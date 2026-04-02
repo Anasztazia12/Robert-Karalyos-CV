@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Robert Karalyos - CV</title>
 	<link rel="icon" href="data:," />
-	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="assets/css/style.css"/>
 
 	<!--bootstrap-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 			<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Me</button>
 			<a class="btn btn-danger" href="#work-experience">Work Experience</a>
 			<a class="btn btn-danger" href="#education">Education</a>
-			<a class="btn btn-danger" id="download-cv" href="Robert-Karalyos-CV.pdf" download="Robert-Karalyos-CV.pdf" target="_blank" rel="noopener">Download CV</a>
+			<a class="btn btn-danger" id="download-cv" href="assets/pdf/Robert-Karalyos-CV.pdf" download>Download CV</a>
 		</div>
 
 		<section id="about-me" class="box">
@@ -161,18 +161,7 @@
 			</div>
 		</div>
 
-	<script>
-		if ("scrollRestoration" in history) {
-			history.scrollRestoration = "manual";
-		}
-
-		window.addEventListener("DOMContentLoaded", () => {
-			if (window.location.hash === "#contact-info") {
-				history.replaceState(null, "", window.location.pathname + window.location.search);
-			}
-			window.scrollTo(0, 0);
-		});
-	</script>
+	
 	<!-- Bootstrap JS (for modal) -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>

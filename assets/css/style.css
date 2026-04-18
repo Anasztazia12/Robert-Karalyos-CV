@@ -24,7 +24,7 @@ body {
 	overflow-x: hidden;
 	font-family: 'Space Grotesk', sans-serif;
 	background: linear-gradient(rgba(10, 20, 16, 0.28), rgba(10, 20, 16, 0.28)),
-		url("assets/pictures/kamion.png") center center / cover fixed no-repeat;
+		url("../pictures/kamion.png") center center / cover fixed no-repeat;
 	color: var(--text);
 	position: relative;
 }
@@ -258,7 +258,7 @@ p {
 		inset: 0;
 		z-index: -1;
 		background: linear-gradient(rgba(10, 20, 16, 0.24), rgba(10, 20, 16, 0.24)),
-			url("assets/pictures/kamion.png") 62% 32% / cover no-repeat;
+			url("../pictures/kamion.png") 62% 32% / cover no-repeat;
 	}
 
 	.cv {

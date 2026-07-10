@@ -62,7 +62,17 @@ body::before {
 	background-color: var(--paper);
 	position: relative;
 	overflow: hidden;
-	animation: rise 0.6s ease both;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html.js .cv {
+		opacity: 0;
+		transform: translateY(14px);
+	}
+
+	html.ready .cv {
+		animation: rise 0.6s ease forwards;
+	}
 }
 
 .cv::before {
@@ -130,17 +140,7 @@ h1 {
 
 .name-part {
 	display: inline-block;
-	opacity: 0;
 	transform-style: preserve-3d;
-	will-change: transform, opacity;
-}
-
-.name-first {
-	animation: swim-in-left 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
-}
-
-.name-second {
-	animation: swim-in-right 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.55s forwards;
 }
 
 @keyframes swim-in-left {
@@ -167,14 +167,23 @@ h1 {
 	}
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: no-preference) {
+	html.js .name-first {
+		opacity: 0;
+		transform: translateX(-55px) translateZ(-80px) rotateY(35deg);
+	}
 
-	.name-part,
-	.cv,
-	.cv::before {
-		animation: none !important;
-		opacity: 1;
-		transform: none;
+	html.js .name-second {
+		opacity: 0;
+		transform: translateX(55px) translateZ(-80px) rotateY(-35deg);
+	}
+
+	html.ready .name-first {
+		animation: swim-in-left 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+	}
+
+	html.ready .name-second {
+		animation: swim-in-right 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.55s forwards;
 	}
 }
 
